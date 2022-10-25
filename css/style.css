@@ -6,3 +6,12 @@
     background-image: url(../img/imagem_inicio.jpeg);
     background-position: center;
 }
+
+.input {
+    margin-top: 12rem;
+}
+
+.cards {
+    background-size: 100%;
+    background-color: #150E01;
+}
