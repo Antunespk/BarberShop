@@ -18,9 +18,15 @@
 }
 
 .formBusca {
+    padding: 50px;
     height: 5rem;
     width: 30rem;
-    border: solid 2px;
+    box-shadow: 5px 5px 10px black;
+    /*border: solid 2px;
+    display: inline-flex;*/
 
+}
 
+.contatos {
+    background-color: #55552b;
 }
