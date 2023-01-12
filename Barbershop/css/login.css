@@ -1,0 +1,32 @@
+section {
+    /* width: 100%; */
+    max-width: 350px;
+    margin: auto;
+}
+
+.login-content {
+
+    background-color: #150E01;
+    padding: 20px;
+    border: solid 1px var(--bs-gray-400);
+    border-radius: 5px;
+}
+
+
+.login-content-novo {
+    padding: 0x;
+    text-align: center;
+}
+
+.login-content-novo div {
+    background-color: var(--white) !important;
+    z-index: 1000;
+    width: 120px;
+    margin: auto;
+    position: relative;
+    top: 25px;
+}
+
+.inicio {
+    background: #252421;
+}
