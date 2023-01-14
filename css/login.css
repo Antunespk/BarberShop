@@ -7,6 +7,8 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    min-width: 90vw;
 }
 
 :root{
@@ -20,25 +22,49 @@ body{
 
 h1{
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
     padding-top: 4rem;
     color: rgb(189, 189, 189);
     
 }
 h2{
-font-size: 3rem;
+font-size: 2rem;
  color: rgb(189, 189, 189);
 }
 
-.conatiner-left{
+.container-left{
+    max-width: 50vw;
+}
+
+.right{
+justify-content: center;
+align-items: center;
+ max-width: 50vw;
  
 }
 
+.right span{
+    color: rgb(103, 49, 10);
+}
+
 .image img{
-width: 60vw;
-height: 99.8vh;
+min-width: 50vw;
+max-height: 100vh;
 object-fit: cover;
 object-position: center;
+position: relative;
+}
+
+.image h1{
+    z-index: 9;
+    position: absolute;
+    font-size: 8rem;
+    margin: 4rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.image span{
+    color:rgb(103, 49, 10);
 }
 
 form{
@@ -50,7 +76,7 @@ form{
 }
 
 form input{
-    width: 40rem;
+    width: 30rem;
     height: 4rem;
     margin: 1rem;
     border: none;
@@ -63,18 +89,109 @@ form button{
     height: 5rem;
     outline: none;
     border: none;
-    background-color: rgba(83, 29, 6, 0.9) ;
+    background-color:rgb(103, 49, 10);;
     color: #fff;
     margin-top: 3rem;
+    font-size: 2rem;
     cursor: pointer;
     transition: all 3ms;
 }
 
 button:hover{
-     background-color: rgb(110, 50, 27);
+     background-color: rgb(149, 65, 32);
 }
 
 .account{
     margin-top: 1rem;
     font-size: 1.5rem;
+}
+
+/* RESPONSIVIDADE */
+
+@media only screen and (max-width: 850px) {
+   
+    .right{
+        margin-left: 5rem;
+    }
+
+    .right h1, h2{
+        font-size: 2rem;
+    }
+
+    .right input{
+        width: 20rem;
+    }
+
+    .right button{
+        width: 12rem;
+        height: 3.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 730px) {
+.image img{
+    width: 20vw;
+    height: 100vh;
+}
+
+.right{
+    margin-right:5rem ;
+}
+
+.image h1{
+    font-size: 4rem;
+}
+}
+
+@media only screen and (max-width: 540px){
+.image img{
+    width: 5vw;
+    height: 100vh;
+}
+
+.image h1{
+    font-size: 3rem;
+}
+
+.right{
+    margin-left: 3rem;
+}
+}
+
+@media only screen and (max-width: 500px){
+.image img{
+    display: none;
+}
+.image h1{
+    display: none;
+}
+
+.right h1{
+    font-size: 3rem;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .right input{
+        width: 30rem;
+    }
+
+    .right button{
+        width: 20rem;
+        height: 3.5rem;
+        font-size: 1.5rem;
+    }
+
+}
+/* FIM DA RESPONSIVIDADE */
+
+/* Validação */
+
+.erro{
+    border: 2px solid rgb(201, 30, 30);
 }
