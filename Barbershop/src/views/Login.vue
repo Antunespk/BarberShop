@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="../css/login.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-</head>
-
-
-<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous">
+</script>
+<template>
 
     <body class="inicio">
         <main>
@@ -34,11 +22,9 @@
                             Senha:
                         </label>
                         <input type="text" class="w-100 form-control my-2" id="login-senha">
-
                         <button class="btn btn-warning text-center w-100 my-1">
                             Continuar
                         </button>
-
                     </form>
 
                     <div class="mt-5">
@@ -46,15 +32,42 @@
                             Criar sua conta
                         </button>
                     </div>
-
                 </div>
             </section>
         </main>
     </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-        crossorigin="anonymous"></script>
+</template>
+<style scoped>
+section {
+    /* width: 100%; */
+    max-width: 350px;
+    margin: auto;
+}
 
-</body>
+.login-content {
 
-</html>
+    background-color: #150E01;
+    padding: 20px;
+    border: solid 1px var(--bs-gray-400);
+    border-radius: 5px;
+}
+
+
+.login-content-novo {
+    padding: 0x;
+    text-align: center;
+}
+
+.login-content-novo div {
+    background-color: var(--white) !important;
+    z-index: 1000;
+    width: 120px;
+    margin: auto;
+    position: relative;
+    top: 25px;
+}
+
+.inicio {
+    background: #252421;
+}
+</style>

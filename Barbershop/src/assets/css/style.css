@@ -3,8 +3,9 @@
 }
 
 .header {
-    background-image: url(../img/imagem_inicio.jpeg);
+    background-image: url(../src/assets/img/imagem_inicio.jpeg);
     background-position: center;
+    width: 100%;
 }
 
 .input {
