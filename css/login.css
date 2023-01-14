@@ -1,0 +1,80 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+h1{
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 4rem;
+    color: rgb(189, 189, 189);
+    
+}
+h2{
+font-size: 3rem;
+ color: rgb(189, 189, 189);
+}
+
+.conatiner-left{
+ 
+}
+
+.image img{
+width: 60vw;
+height: 99.8vh;
+object-fit: cover;
+object-position: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 25vh;
+}
+
+form input{
+    width: 40rem;
+    height: 4rem;
+    margin: 1rem;
+    border: none;
+    border-bottom: 1px solid rgb(186, 186, 186);
+    outline: none;
+}
+
+form button{
+    width: 20rem;
+    height: 5rem;
+    outline: none;
+    border: none;
+    background-color: rgba(83, 29, 6, 0.9) ;
+    color: #fff;
+    margin-top: 3rem;
+    cursor: pointer;
+    transition: all 3ms;
+}
+
+button:hover{
+     background-color: rgb(110, 50, 27);
+}
+
+.account{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
