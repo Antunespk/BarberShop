@@ -3,7 +3,7 @@
 }
 
 .header {
-  background-image: url(../assets/img/imagem_inicio.jpeg);
+  background-image: url(@assets/img/imagem_inicio.jpeg);
   background-position: center;
   width: 100%;
 }

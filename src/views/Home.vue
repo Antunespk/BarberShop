@@ -6,10 +6,44 @@ import Cards from '../components/Cards.vue';
     <main>
         <header>
             <Navbar></Navbar>
+            <div class="h300 text-white">
+                <h3>
+                    Seu Barbeiro
+                </h3>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="input">
+                        <div class="">
+                            <label for="">Descubra e reserve profissionais de beleza próximo a você</label>
+                        </div>
+                        <input id="profissionais-form" type="text" name="localizacao_servicos">
+                        <input id="localizacao-form" type="text" name="localizacao_servicos">
+                    </div>
+                </div>
+            </div>
         </header>
 
         <body>
+
+            <div class="text-center py-3">
+                <h3>BARBEARIAS</h3>
+            </div>
+
             <Cards></Cards>
+
+            <section class="p-4">
+                <div class="text text-center">
+                    <div class="p-5">
+                        <h3>
+                            Pesquisar por profissionais próximos
+                        </h3>
+                    </div>
+
+                    <div class="p-3 formBusca d-inline">
+                        <input type="text" placeholder="barbeiros proximos a mim...">
+                        <button class="btn btn-secondary">buscar</button>
+                    </div>
+                </div>
+            </section>
         </body>
 
     </main>

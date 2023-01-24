@@ -1,6 +1,5 @@
-<script>
+<script></script>
 
-</script>
 
 <template>
     <div class="flex-wrap justify-content-between btn btn-dark w-100 mt-4">
@@ -34,6 +33,5 @@
 .icon {
     font-size: 15px;
     color: white;
-
 }
 </style>
