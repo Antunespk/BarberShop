@@ -1,5 +1,6 @@
-<script>
+<script setup>
 </script>
+
 <template>
 
     <body class="inicio">

@@ -1,11 +1,16 @@
-.h300 {
-    height: 300px;
+body {
+    font-family: sans-serif;
+    font-size: 14px;
 }
 
-.header {
+header {
     background-image: url(@/assets/img/imagem_inicio.jpeg);
     background-position: center;
     width: 100%;
+}
+
+.h300 {
+    height: 300px;
 }
 
 .input {
@@ -38,7 +43,7 @@
     width: 30rem;
     box-shadow: 5px 5px 10px black;
     /*border: solid 2px;
-    display: inline-flex;*/
+  display: inline-flex;*/
 
 }
 

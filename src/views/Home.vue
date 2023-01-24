@@ -1,11 +1,9 @@
 <script setup>
-import Navbar from '../components/Navbar.vue';
 import Cards from '../components/Cards.vue';
 </script>
 <template>
     <main>
         <header>
-            <Navbar></Navbar>
             <div class="h300 text-white">
                 <h3>
                     Seu Barbeiro
