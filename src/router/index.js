@@ -23,6 +23,11 @@ const router = createRouter({
       path: '/CadastroPro',
       name: 'CadastroPro',
       component: () => import('../views/CadastroPro.vue')
+    },
+    {
+      path: '/servico-cad',
+      name: 'servico-cad',
+      component: () => import('../views/servicoCadatro.vue')
     }
   ]
 })
