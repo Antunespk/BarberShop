@@ -1,7 +1,6 @@
 <script>
 import { RouterLink } from 'vue-router';
 
-
 </script>
 
 <template>
@@ -26,7 +25,7 @@ import { RouterLink } from 'vue-router';
                     <RouterLink class="nav-link" to="/CadastroPro">Crie sua conta</RouterLink>
                 </li>
                 <li class="nav-item">
-                    <RouterLink class="nav-link" to="/servico-cad">Casdatro serviço</RouterLink>
+                    <RouterLink class="nav-link" to="/servico-cad">Cadastro serviço</RouterLink>
                 </li>
             </ul>
         </div>
