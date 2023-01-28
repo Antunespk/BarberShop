@@ -12,17 +12,13 @@
             <a href=""><i class="text-white fa-solid fa-envelope fa-2x"></i></a>
         </section>
         <div class="flex-wrap pt-2">
-            <a href="">info</a>
+            <a href="">-info-</a>
             <a href="">suporte</a>
-            <a href="">marketing</a>
+            <a href="">-marketing-</a>
         </div>
 
-        <a href="">
-            Termos de Uso
-        </a>
-        <a href="">
-            Politica de Privacidade
-        </a>
+        <a href="">-Termos de Uso-</a>
+        <a href="">Politica de Privacidade-</a>
         <p>
             Develop By @DevsOptions
         </p>

@@ -15,8 +15,8 @@ const router = createRouter({
     //   component: () => import('../views/Emphasis.vue')
     // },
     {
-      path: '/login',
-      name: 'login',
+      path: '/Login',
+      name: 'Login',
       component: () => import('../views/Login.vue')
     },
     {

@@ -5,8 +5,11 @@ import Footer from '../components/Footer.vue'
 </script>
 <template>
     <main>
-        <header>
+        <section>
             <Navbar></Navbar>
+        </section>
+        <header class="header container-xxl">
+            <h2>Zero 21</h2>
         </header>
 
         <body>
@@ -15,6 +18,11 @@ import Footer from '../components/Footer.vue'
     </main>
     <Footer></Footer>
 </template>
-<style>
-
+<style scoped>
+.header {
+    background-image: url(../assets/img/imagem_inicio.jpeg);
+    background-position: center;
+    width: 100%;
+    height: 300px;
+}
 </style>
