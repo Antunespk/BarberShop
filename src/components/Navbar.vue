@@ -22,7 +22,10 @@ import { RouterLink } from 'vue-router';
                     <RouterLink class="nav-link" to="/Login">Faça o Login</RouterLink>
                 </li>
                 <li class="nav-item">
-                    <RouterLink class="nav-link" to="/CadastroPro">Crie sua conta</RouterLink>
+                    <RouterLink class="nav-link" to="/CadastroPro">Crie sua conta Profissional</RouterLink>
+                </li>
+                <li class="nav-item">
+                    <RouterLink class="nav-link" to="/usuarioAdd">Crie sua conta</RouterLink>
                 </li>
                 <li class="nav-item">
                     <RouterLink class="nav-link" to="/servico-cad">Cadastro serviço</RouterLink>
