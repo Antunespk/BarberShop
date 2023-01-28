@@ -25,6 +25,9 @@ import { RouterLink } from 'vue-router';
                 <li class="nav-item">
                     <RouterLink class="nav-link" to="/CadastroPro">Crie sua conta</RouterLink>
                 </li>
+                <li class="nav-item">
+                    <RouterLink class="nav-link" to="/servico-cad">Casdatro serviço</RouterLink>
+                </li>
             </ul>
         </div>
     </nav>
