@@ -17,7 +17,7 @@ const router = createRouter({
     {
       path: '/Login',
       name: 'login',
-      component: () => import('../views/login.vue')
+      component: () => import('../views/Login.vue')
     },
     {
       path: '/CadastroPro',

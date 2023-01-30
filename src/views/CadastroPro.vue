@@ -103,7 +103,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0c0ce94d;
+    background-color: #f9f9f8;
 }
 
 .container {

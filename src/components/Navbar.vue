@@ -12,12 +12,9 @@ import { RouterLink } from 'vue-router';
         </button>
         <div class="collapse navbar-collapse" id="textoNavbar">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <RouterLink class="nav-link" to="/">Home <span class="sr-only">(Página atual)</span></RouterLink>
-                </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <RouterLink class="nav-link" to="/emphasis">Destaques</RouterLink>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <RouterLink class="nav-link" to="/Login">Faça o Login</RouterLink>
                 </li>

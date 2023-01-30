@@ -1,11 +1,11 @@
-<script>
-const btnEnviar = document.querySelector("#button")
+<script setup>
+const btnEnviar = document.querySelector("#button");
 
 btnEnviar.addEventListener('click', (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
-    const email = document.querySelector("#email")
-    const password = document.querySelector("#password")
+    const email = document.querySelector("#email");
+    const password = document.querySelector("#password");
 
     if (email.value == "" || NaN) {
         alert("Digite o E-mail corretamente")

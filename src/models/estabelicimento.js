@@ -5,9 +5,9 @@ export class Estabelecimento {
         ativo = true,
         id_socio = [],
     ) {
-        tris.logradouro = logradouro,
-            tris.bairro = bairro,
-            tris.ativo = ativo,
-            tris.id_socio = id_socio
+        this.logradouro = logradouro,
+            this.bairro = bairro,
+            this.ativo = ativo,
+            this.id_socio = id_socio
     }
 }
