@@ -1,32 +1,46 @@
 <script>
-const btnEnviar = document.querySelector("#button")
 
-btnEnviar.addEventListener('click', (event) => {
-    event.preventDefault()
+export default {
+    data() {
+        return {
+            usuario: {}
+        
+        }
+    },
+    methods: {
+        enviar() {
+            const btnEnviar = document.querySelector("#button")
+            btnEnviar.addEventListener('click', (event) => {
+                event.preventDefault()
+                const email = document.querySelector("#email")
+                const password = document.querySelector("#password")
 
-    const email = document.querySelector("#email")
-    const password = document.querySelector("#password")
+                if (email.value == "" || NaN) {
+                    alert("Digite o E-mail corretamente")
+                    email.classList.add("erro")
+                } else {
+                    email.classList.remove("erro")
+                }
 
-    if (email.value == "" || NaN) {
-        alert("Digite o E-mail corretamente")
-        email.classList.add("erro")
-    } else {
-        email.classList.remove("erro")
+                if (password.value == "" || NaN) {
+                    alert("Digite a senha corretamente")
+                    password.classList.add("erro")
+                } else {
+                    password.classList.remove("erro")
+                }
+            })
+        }
+    },
+    mounted() {
+        this.enviar();
     }
+}
 
-    if (password.value == "" || NaN) {
-        alert("Digite a senha corretamente")
-        password.classList.add("erro")
-    } else {
-        password.classList.remove("erro")
-    }
-})
 </script>
 
 <template>
-
-    <body>
-        <main class="container">
+    <main>
+        <div class="container">
             <div class="container-left">
                 <div class="image">
                     <h1 class="021"> ZERO <span> 21</span></h1>
@@ -40,16 +54,18 @@ btnEnviar.addEventListener('click', (event) => {
                 <div class="box-login">
                     <form action="">
                         <h2>Faça seu login</h2>
-                        <input type="email" id="email" placeholder="Digite seu E-mail">
-                        <input type="password" id="password" placeholder="Digite sua senha">
+                        <input type="email" id="email" v-model="usuario.email" placeholder="Digite seu E-mail">
+                        <input type="password" id="password" v-model="usuario.password" placeholder="Digite sua senha">
                         <span><a href="#"> Esqueceu sua senha?</a></span>
-                        <button id="button" type="submit">Entrar</button>
+                        <button id="button" type="button">Entrar</button>
                         <span class="account"> <a href="#"> Criar uma conta</a></span>
                     </form>
                 </div>
             </container>
-        </main>
-    </body>
+
+            {{ usuario.email }} {{ usuario.password }}
+        </div>
+    </main>
 </template>
 
 <style scoped>
