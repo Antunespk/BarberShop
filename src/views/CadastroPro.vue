@@ -103,7 +103,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f9f9f8;
+    background-color: rgb(189, 189, 189);
 }
 
 .container {
@@ -118,7 +118,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fde3a7d7;
+    background-color: rgb(189, 189, 189);
     padding: 1rem;
 }
 
@@ -149,14 +149,14 @@ body {
 
 .login-button button {
     border: none;
-    background-color: #6c63ff;
+    background-color: rgb(103, 49, 10);
     padding: 0.4rem 1rem;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .login-button button:hover {
-    background-color: #6b63fff1;
+    background-color: rgb(149, 65, 32);
 }
 
 .login-button button a {
@@ -170,7 +170,7 @@ body {
     display: block;
     width: 8rem;
     height: 0.3rem;
-    background-color: #6c63ff;
+    background-color: rgb(189, 189, 189);
     margin: 0 auto;
     position: absolute;
     border-radius: 10px
@@ -202,7 +202,7 @@ body {
 }
 
 .input-box input:focus-visible {
-    outline: 1px solid #6c63ff;
+    outline: 1px solid rgb(103, 49, 10);
 }
 
 .input-box label,
@@ -242,14 +242,14 @@ body {
     width: 100%;
     margin-top: 0.5rem;
     border: none;
-    background-color: #6c63ff;
+    background-color: rgb(103, 49, 10);
     padding: 0.62rem;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .continue-button button:hover {
-    background-color: #6b63fff1;
+    background-color: rgb(149, 65, 32);
 }
 
 .continue-button button a {
