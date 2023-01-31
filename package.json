@@ -9,8 +9,8 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@jridgewell/sourcemap-codec": "^1.4.14",
     "moment": "^2.29.4",
-    "sourcemap-codec": "^1.4.8",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
