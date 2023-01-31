@@ -44,7 +44,7 @@ export default {
             <div class="container-left">
                 <div class="image">
                     <h1 class="021"> ZERO <span> 21</span></h1>
-                    <img src="../assets/img/background login.jpg"
+                    <img src="../assets/img/background_login.jpg"
                         alt="Fotografia de um barbeiro fazendo a barba de um rapaz">
                 </div>
             </div>
