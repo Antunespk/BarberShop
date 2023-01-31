@@ -47,15 +47,14 @@ export default {
                         </div>
 
                         <div class="input-box">
-                            <label for="password">Senha</label>
-                            <input id="password" type="password" name="password" placeholder="Digite sua senha"
-                                required>
+                            <label for="senha">Senha</label>
+                            <input id="senha" type="senha" name="senha" placeholder="Digite sua senha" required>
                         </div>
 
 
                         <div class="input-box">
-                            <label for="confirmPassword">Confirme sua Senha</label>
-                            <input id="confirmPassword" type="password" name="confirmPassword"
+                            <label for="confirmsenha">Confirme sua Senha</label>
+                            <input id="confirmsenha" type="senha" name="confirmsenha"
                                 placeholder="Digite sua senha novamente" required>
                         </div>
 

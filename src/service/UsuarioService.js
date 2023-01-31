@@ -16,7 +16,7 @@ export default {
     },
 
     login: function (usuario) {
-        let dadoslogin = { email: usuario.email, password: usuario.senha };
+        let dadoslogin = { email: usuario.email, senha: usuario.senha };
         return http.post("/usuario/login", dadoslogin);
     },
     upload: function (dataSend) {

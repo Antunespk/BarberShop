@@ -41,14 +41,13 @@
                         </div>
 
                         <div class="input-box">
-                            <label for="password">Senha </label>
-                            <input id="password" type="password" name="password" placeholder="Digite sua senha"
-                                required>
+                            <label for="senha">Senha </label>
+                            <input id="senha" type="senha" name="senha" placeholder="Digite sua senha" required>
                         </div>
 
                         <div class="input-box">
-                            <label for="password">Confirme sua senha </label>
-                            <input id="password" type="password" name="Confirmpassword" placeholder="Confirme sua senha"
+                            <label for="senha">Confirme sua senha </label>
+                            <input id="senha" type="senha" name="Confirmsenha" placeholder="Confirme sua senha"
                                 required>
                         </div>
                     </div>

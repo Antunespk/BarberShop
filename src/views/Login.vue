@@ -13,7 +13,7 @@ export default {
             btnEnviar.addEventListener('click', (event) => {
                 event.preventDefault()
                 const email = document.querySelector("#email")
-                const password = document.querySelector("#password")
+                const senha = document.querySelector("#senha")
 
                 if (email.value == "" || NaN) {
                     alert("Digite o E-mail corretamente")
@@ -22,11 +22,11 @@ export default {
                     email.classList.remove("erro")
                 }
 
-                if (password.value == "" || NaN) {
+                if (senha.value == "" || NaN) {
                     alert("Digite a senha corretamente")
-                    password.classList.add("erro")
+                    senha.classList.add("erro")
                 } else {
-                    password.classList.remove("erro")
+                    senha.classList.remove("erro")
                 }
             })
         }
@@ -55,7 +55,7 @@ export default {
                     <form action="">
                         <h2>Faça seu login</h2>
                         <input type="email" id="email" v-model="usuario.email" placeholder="Digite seu E-mail">
-                        <input type="password" id="password" v-model="usuario.password" placeholder="Digite sua senha">
+                        <input type="senha" id="senha" v-model="usuario.senha" placeholder="Digite sua senha">
                         <span><a href="#"> Esqueceu sua senha?</a></span>
                         <button id="button" type="button">Entrar</button>
                         <span class="account"> <a href="#"> Criar uma conta</a></span>
@@ -63,7 +63,7 @@ export default {
                 </div>
             </container>
 
-            {{ usuario.email }} {{ usuario.password }}
+            {{ usuario.email }} {{ usuario.senha }}
         </div>
     </main>
 </template>
