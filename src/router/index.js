@@ -28,6 +28,11 @@ const router = createRouter({
       path: '/servico-cad',
       name: 'servico-cad',
       component: () => import('../views/servicoCadatro.vue')
+    },
+    {
+     path: '/PaineldeControle',
+      name: 'PainelControle',
+      component: () => import('../views/PainelControle.vue')
     }
   ]
 })
