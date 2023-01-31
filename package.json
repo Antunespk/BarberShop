@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "moment": "^2.29.4",
+    "sourcemap-codec": "^1.4.8",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
