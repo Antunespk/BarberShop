@@ -1,9 +1,7 @@
 <script >
-import Navbar from '@/components/navbar.vue';
 import constates from '@/models/constates.js';
 
 export default {
-    components: { Navbar },
     data() {
         return {
             tipos: constates.tipoServicos
