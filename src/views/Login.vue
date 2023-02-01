@@ -57,7 +57,7 @@ export default {
                         <input type="email" id="email" v-model="usuario.email" placeholder="Digite seu E-mail">
                         <input type="senha" id="senha" v-model="usuario.senha" placeholder="Digite sua senha">
                         <span><a href="#"> Esqueceu sua senha?</a></span>
-                        <button id="button" type="button">Entrar</button>
+                        <button id="button" type="button" @click="enviar()">Entrar</button>
                         <span class="account"> <a href="#"> Criar uma conta</a></span>
                     </form>
                 </div>
