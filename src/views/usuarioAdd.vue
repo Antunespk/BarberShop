@@ -7,7 +7,7 @@
         <div class="container">
             <div class="form-image">
 
-                <img src="../img/cort4.png" alt="" width="1000">
+                <img src="../assets/img/cort4.png" alt="" width="1000">
             </div>
             <div class="form">
                 <form action="#">
