@@ -1,4 +1,34 @@
-<script >
+<script>
+import { Usuario } from '@/model/usuario.js';
+import usuarioService from '@/service/usuarioService';
+
+var usuario = new Usuario();
+
+export default {
+    data() {
+        return {
+            usuario
+        }
+    },
+    methods: {
+        usuarioAddOld() {
+            usuarioService.addOld(this.usuario);
+        },
+        usuarioAdd() {
+            // starLoading -> modal
+            usuarioService.add(this.usuario)
+                .then(res => {
+                    console.log(res.data);
+                    alert("Cadastro!");
+                    //endLoading -> modal
+                    //router.push("/");
+                })
+                .catch(error => {
+                    alert(error.data);
+                });
+        }
+    }
+}
 </script>
 <template>
     <Navbar></Navbar>
@@ -85,7 +115,7 @@
                     </div>
 
                     <div class="continue-button">
-                        <button><a href="#">Continuar</a> </button>
+                        <button @click="usuarioAdd()">Continuar </button>
                     </div>
                 </form>
             </div>
@@ -253,13 +283,16 @@ body {
     padding: 0.62rem;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
 }
 
 .continue-button button:hover {
     background-color: #6b63fff1;
 }
 
-.continue-button button a {
+.continue-button button {
     text-decoration: none;
     font-size: 0.93rem;
     font-weight: 500;
