@@ -1,10 +1,12 @@
-<script></script>
+<script>
+
+</script>
 <template>
 
     <body>
         <div class="container">
             <div class="form-image">
-                <img src="../assets/img/undraw_barber_-3-uel (1).svg">
+                <img src="../assets/img/undrawBarber.svg">
             </div>
             <div class="form">
                 <form action="#">
