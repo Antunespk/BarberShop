@@ -5,7 +5,7 @@ const configure = {
 };
 
 const http = axios.create({
-    baseURL: configure.local,
+    baseURL: "https://api-em-nodejs-para-sistema-de-promocao.onrender.com",
     headers: {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json;charset=utf-8',
