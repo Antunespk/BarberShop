@@ -1,9 +1,16 @@
 <script>
+import usuarioService from "../service/UsuarioService";
+const http = axios.create({
+    baseurl: "https://api-em-nodejs-para-sistema-de-promocao.onrender.com"
+})
 
 export default {
     data() {
         return {
-            usuario: {}
+            usuario: {
+                email: "",
+                senha: ""
+            }
 
         }
     },
