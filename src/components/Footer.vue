@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="flex-wrap justify-content-between btn btn-dark w-100 mt-4">
+    <div class=" flex-wrap justify-content-between btn btn-dark w-100 mt-4">
         <section class=" icon contatos d-flex justify-content-around pt-3">
             <a href=""><i class="text-white fa-brands fa-whatsapp fa-2x py-2"></i> </a>
             <a href=""><i class="text-white fa-brands fa-instagram fa-2x py-2"></i></a>
@@ -30,6 +30,5 @@
 .icon {
     font-size: 15px;
     color: white;
-
 }
 </style>

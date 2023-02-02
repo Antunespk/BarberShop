@@ -3,7 +3,8 @@
 </script>
 <template>
 
-    <body>
+    <main>
+
         <div class="container">
             <div class="form-image">
                 <img src="../assets/img/undrawBarber.svg">
@@ -88,7 +89,7 @@
                 </form>
             </div>
         </div>
-    </body>
+    </main>
 </template>
 <style scoped>
 * {
@@ -98,7 +99,7 @@
     font-family: 'Inter', sans-serif;
 }
 
-body {
+main {
     width: 100%;
     height: 100vh;
     display: flex;
