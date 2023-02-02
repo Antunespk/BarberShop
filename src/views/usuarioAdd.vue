@@ -33,7 +33,7 @@ export default {
 <template>
     <Navbar></Navbar>
 
-    <body>
+    <main>
         <div class="container">
             <div class="form-image">
 
@@ -120,7 +120,7 @@ export default {
                 </form>
             </div>
         </div>
-    </body>
+    </main>
 
 </template>
 <style scoped>
@@ -133,7 +133,7 @@ export default {
     font-family: 'Inter', sans-serif;
 }
 
-body {
+main {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -154,7 +154,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #beaf8cd7;
+    background-color: rgb(189, 189, 189);
     padding: 1rem;
 }
 
@@ -192,7 +192,7 @@ body {
 }
 
 .login-button button:hover {
-    background-color: #6b63fff1;
+    background-color: rgb(103, 49, 10)
 }
 
 .login-button button a {
@@ -235,11 +235,11 @@ body {
 }
 
 .input-box input:hover {
-    background-color: #f1d28f;
+background-color: rgb(189, 189, 189);
 }
 
 .input-box input:focus-visible {
-    outline: 1px solid #6c63ff;
+    outline: 1px solid rgb(103, 49, 10);
 }
 
 .input-box label,
@@ -289,7 +289,7 @@ body {
 }
 
 .continue-button button:hover {
-    background-color: #6b63fff1;
+    background-color: rgb(103, 49, 10);
 }
 
 .continue-button button {

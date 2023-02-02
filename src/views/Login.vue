@@ -138,10 +138,6 @@ main {
     color:rgb(103, 49, 10)
 }
 
-.title h1 {
-    margin-bottom: 3rem;
-}
-
 .form-header h1::after {
     content: '';
     display: block;
