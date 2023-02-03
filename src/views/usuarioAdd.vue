@@ -1,11 +1,11 @@
 <script>
-import { Usuario } from '../models/Usuario';
-import usuarioService from '../service/usuarioService';
+import { Usuario } from '@/models/Usuario.js';
+import usuarioService from '@/service/usuarioService.js';
 
 export default {
     data() {
         return {
-            user: {}
+            user: new Usuario()
         }
     },
     methods: {
