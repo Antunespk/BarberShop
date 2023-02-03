@@ -1,5 +1,5 @@
 <script>
-import usuarioService from "../service/UsuarioService";
+import usuarioService from "@/service/UsuarioService";
 const http = axios.create({
     baseurl: "https://api-em-nodejs-para-sistema-de-promocao.onrender.com"
 })
@@ -53,9 +53,9 @@ export default {
                 <img src="../assets/img/undrawBarber.svg">
             </div>
             <div class="form">
-                    <div class="zero21">
-                        <h1>ZERO<span>21</span> </h1>
-                    </div>
+                <div class="zero21">
+                    <h1>ZERO<span>21</span> </h1>
+                </div>
                 <form action="#">
                     <div class="form-header">
                         <div class="title">
@@ -136,13 +136,13 @@ main {
     justify-content: space-between;
 }
 
-.zero21{
-  text-align: start;
+.zero21 {
+    text-align: start;
     padding-bottom: 5rem;
 }
 
-.zero21 span{
-    color:rgb(103, 49, 10)
+.zero21 span {
+    color: rgb(103, 49, 10)
 }
 
 .form-header h1::after {
