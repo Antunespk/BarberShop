@@ -5,7 +5,7 @@ import usuarioService from '../service/usuarioService';
 export default {
     data() {
         return {
-            new: Usuario()
+            user: {}
         }
     },
     methods: {
