@@ -235,7 +235,7 @@ main {
 }
 
 .input-box input:hover {
-background-color: rgb(189, 189, 189);
+    background-color: rgb(189, 189, 189);
 }
 
 .input-box input:focus-visible {
