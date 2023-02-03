@@ -1,6 +1,6 @@
 <script>
 import { Usuario } from '@/models/Usuario.js';
-import usuarioService from './service/usuarioService.js';
+import usuarioService from '@/service/usuarioService.js';
 
 export default {
     data() {
@@ -9,12 +9,12 @@ export default {
         }
     },
     methods: {
-        UsuarioAddOld() {
-            usuarioService.addOld(this.Usuario);
+        usuarioAddOld() {
+            usuarioService.addOld(this.usuario);
         },
-        UsuarioAdd() {
+        usuarioAdd() {
             // starLoading -> modal
-            usuarioService.add(this.Usuario)
+            usuarioService.add(this.usuario)
                 .then(res => {
                     console.log(res.data);
                     alert("Cadastro!");
