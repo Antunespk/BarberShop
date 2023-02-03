@@ -1,6 +1,6 @@
 <script>
 import { Usuario } from '@/models/Usuario.js';
-import usuarioService from '@/service/usuarioService.js';
+import usuarioService from './service/usuarioService.js';
 
 export default {
     data() {
