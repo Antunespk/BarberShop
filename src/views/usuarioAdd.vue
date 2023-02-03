@@ -2,21 +2,19 @@
 import { Usuario } from '../models/Usuario';
 import usuarioService from '../service/usuarioService';
 
-var usuario = new Usuario();
-
 export default {
     data() {
         return {
-            usuario
+            new: Usuario()
         }
     },
     methods: {
-        usuarioAddOld() {
-            usuarioService.addOld(this.usuario);
+        UsuarioAddOld() {
+            usuarioService.addOld(this.Usuario);
         },
-        usuarioAdd() {
+        UsuarioAdd() {
             // starLoading -> modal
-            usuarioService.add(this.usuario)
+            usuarioService.add(this.Usuario)
                 .then(res => {
                     console.log(res.data);
                     alert("Cadastro!");

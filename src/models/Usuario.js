@@ -22,6 +22,4 @@ export class Usuario {
             this.tipo = tipo
     }
 }
-
-
 //tipo: 0 = admin | 1 = cliente | 2 profissional
