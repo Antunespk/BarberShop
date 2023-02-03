@@ -1,6 +1,6 @@
 <script>
-import { Usuario } from '@/models/Usuario';
-import usuarioService from '@/service/usuarioService';
+import { Usuario } from '../models/Usuario';
+import usuarioService from '../service/usuarioService';
 
 var usuario = new Usuario();
 
