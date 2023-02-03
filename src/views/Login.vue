@@ -1,8 +1,5 @@
 <script>
 import usuarioService from "@/service/UsuarioService";
-const http = axios.create({
-    baseurl: "https://api-em-nodejs-para-sistema-de-promocao.onrender.com"
-})
 
 export default {
     data() {
@@ -15,31 +12,23 @@ export default {
         }
     },
     methods: {
-        enviar() {
-            const btnEnviar = document.querySelector("#button")
-            btnEnviar.addEventListener('click', (event) => {
-                event.preventDefault()
-                const email = document.querySelector("#email")
-                const senha = document.querySelector("#senha")
+        entrar() {
+            // starLoading -> modal
+            usuarioService.login(this.usuario)
+                .then(res => {
+                    console.log(res.data);
+                    this.$router.push("/");
+                    this.$router.go()
+                    alert("Cadastro!");
+                    //endLoading -> modal
+                    //router.push("/");
+                })
+                .catch((error) => {
+                    console.log(error);
+                    alert("Erro ao fazer o login!");
+                });
 
-                if (email.value == "" || NaN) {
-                    alert("Digite o E-mail corretamente")
-                    email.classList.add("erro")
-                } else {
-                    email.classList.remove("erro")
-                }
-
-                if (senha.value == "" || NaN) {
-                    alert("Digite a senha corretamente")
-                    senha.classList.add("erro")
-                } else {
-                    senha.classList.remove("erro")
-                }
-            })
         }
-    },
-    mounted() {
-        this.enviar();
     }
 }
 
@@ -66,17 +55,19 @@ export default {
                     <div class="input-group">
                         <div class="input-box">
                             <label for="email">E-mail</label>
-                            <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                            <input id="email" type="email" name="email" placeholder="Digite seu e-mail"
+                                v-model="usuario.email" required>
                         </div>
 
                         <div class="input-box">
                             <label for="senha">Senha </label>
-                            <input id="senha" type="senha" name="senha" placeholder="Digite sua senha" required>
+                            <input id="senha" type="senha" name="senha" placeholder="Digite sua senha"
+                                v-model="usuario.senha" required>
                         </div>
                     </div>
 
                     <div class="entrar-button">
-                        <button><a href="#">Entrar</a></button>
+                        <button @click="entrar()"><a>Entrar</a></button>
                     </div>
                 </form>
             </div>
