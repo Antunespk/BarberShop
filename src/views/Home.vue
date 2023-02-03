@@ -9,7 +9,7 @@ import Footer from '../components/Footer.vue'
             <Navbar></Navbar>
         </section>
         <header class="header container-xxl">
-            <h2>Zero 21</h2>
+            <h2 class="zero21">Zero<span>21</span></h2>
         </header>
 
         <body>
@@ -24,5 +24,12 @@ import Footer from '../components/Footer.vue'
     background-position: center;
     width: 100%;
     height: 300px;
+}
+
+.zero21{
+color: white;
+}
+.zero21 span{
+    color: rgb(103, 49, 10);
 }
 </style>
