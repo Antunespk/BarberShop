@@ -1,6 +1,6 @@
 <script>
 import { Usuario } from '@/models/Usuario.js';
-import usuarioService from '../service/UsuarioService';
+import usuarioService from '@/service/UsuarioService';
 import { RouterLink } from 'vue-router';
 
 let usuario = new Usuario();
