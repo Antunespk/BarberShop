@@ -2,7 +2,7 @@ import { Usuario } from '@/models/Usuario.js'; //@ referencia a pasta principal 
 import http from './config';
 
 export default {
-    add: function (usuario = new usuario) {
+    add: function (usuario = new Usuario) {
         console.log(usuario);
         return http.post("/usuario/add", usuario);
     },
