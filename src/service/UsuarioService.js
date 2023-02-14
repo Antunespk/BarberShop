@@ -1,4 +1,4 @@
-import { Usuario } from '@/model/Usuario'; //@ referencia a pasta principal do sistema (SRC)
+import { Usuario } from '@/models/Usuario.js'; //@ referencia a pasta principal do sistema (SRC)
 import http from './config';
 
 export default {

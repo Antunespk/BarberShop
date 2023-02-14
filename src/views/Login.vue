@@ -1,38 +1,34 @@
 <script>
+import usuarioService from "@/service/UsuarioService";
 
 export default {
     data() {
         return {
-            usuario: {}
+            usuario: {
+                email: "",
+                senha: ""
+            }
 
         }
     },
     methods: {
-        enviar() {
-            const btnEnviar = document.querySelector("#button")
-            btnEnviar.addEventListener('click', (event) => {
-                event.preventDefault()
-                const email = document.querySelector("#email")
-                const senha = document.querySelector("#senha")
+        entrar() {
+            // starLoading -> modal
+            usuarioService.login(this.usuario)
+                .then(res => {
+                    console.log(res.data);
+                    this.$router.push("/");
+                    this.$router.go()
+                    alert("Cadastro!");
+                    //endLoading -> modal
+                    //router.push("/");
+                })
+                .catch((error) => {
+                    console.log(error);
+                    alert("Erro ao fazer o login!");
+                });
 
-                if (email.value == "" || NaN) {
-                    alert("Digite o E-mail corretamente")
-                    email.classList.add("erro")
-                } else {
-                    email.classList.remove("erro")
-                }
-
-                if (senha.value == "" || NaN) {
-                    alert("Digite a senha corretamente")
-                    senha.classList.add("erro")
-                } else {
-                    senha.classList.remove("erro")
-                }
-            })
         }
-    },
-    mounted() {
-        this.enviar();
     }
 }
 
@@ -46,9 +42,9 @@ export default {
                 <img src="../assets/img/undrawBarber.svg">
             </div>
             <div class="form">
-                    <div class="zero21">
-                        <h1>ZERO<span>21</span> </h1>
-                    </div>
+                <div class="zero21">
+                    <h1>ZERO<span>21</span> </h1>
+                </div>
                 <form action="#">
                     <div class="form-header">
                         <div class="title">
@@ -59,17 +55,19 @@ export default {
                     <div class="input-group">
                         <div class="input-box">
                             <label for="email">E-mail</label>
-                            <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                            <input id="email" type="email" name="email" placeholder="Digite seu e-mail"
+                                v-model="usuario.email" required>
                         </div>
 
                         <div class="input-box">
                             <label for="senha">Senha </label>
-                            <input id="senha" type="senha" name="senha" placeholder="Digite sua senha" required>
+                            <input id="senha" type="senha" name="senha" placeholder="Digite sua senha"
+                                v-model="usuario.senha" required>
                         </div>
                     </div>
 
                     <div class="entrar-button">
-                        <button><a href="#">Entrar</a></button>
+                        <button @click="entrar()"><a>Entrar</a></button>
                     </div>
                 </form>
             </div>
@@ -129,13 +127,13 @@ main {
     justify-content: space-between;
 }
 
-.zero21{
-  text-align: start;
+.zero21 {
+    text-align: start;
     padding-bottom: 5rem;
 }
 
-.zero21 span{
-    color:rgb(103, 49, 10)
+.zero21 span {
+    color: rgb(103, 49, 10)
 }
 
 .form-header h1::after {

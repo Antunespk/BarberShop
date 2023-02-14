@@ -1,8 +1,9 @@
 <script>
-import { Usuario } from '../models/usuario';
-import usuarioService from '../service/UsuarioService';
+import { Usuario } from '@/models/Usuario.js';
+import usuarioService from '@/service/UsuarioService';
+import { RouterLink } from 'vue-router';
 
-var usuario = new Usuario();
+let usuario = new Usuario();
 
 export default {
     data() {
@@ -11,113 +12,87 @@ export default {
         }
     },
     methods: {
-        usuarioAddOld() {
-            usuarioService.addOld(this.usuario);
-        },
         usuarioAdd() {
             // starLoading -> modal
             usuarioService.add(this.usuario)
                 .then(res => {
                     console.log(res.data);
-                    alert("Cadastro!");
+                    alert("Cadastrado!");
                     //endLoading -> modal
-                    //router.push("/");
+                    this.router.push("/");
                 })
                 .catch(error => {
                     alert(error.data);
+                    console.log(this.usuario)
                 });
         }
     }
 }
+// function confereSenha() {
+//     const senha = document.querySelector('input [name=senha]');
+//     const confirm = document.querySelector('input[name=confirmSenha]');
+
+//     if (confirm.value === senha.value) {
+//         confirm.setCustomValidity('');
+//     } else {
+//         confirm.setCustomValidity('As senhas não conferem');
+//     }
+// }
+
 </script>
 <template>
     <Navbar></Navbar>
-
     <main>
         <div class="container">
             <div class="form-image">
-
                 <img src="../assets/img/cort4.png" alt="" width="1000">
             </div>
             <div class="form">
-                <form action="#">
-                    <div class="form-header">
-                        <div class="title">
-                            <h1>Cadastre-se</h1>
-                        </div>
-                        <div class="login-button">
-                            <button><a href="#">Entrar</a></button>
-                        </div>
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                    <div class="login-button">
+                        <button>
+                            <RouterLink to="/login"><a>Entrar</a></RouterLink>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firstname">Nome completo</label>
+                        <input id="firstname" type="text" name="firstname" placeholder="Digite seu nome Completo"
+                            v-model="usuario.nome" required>
                     </div>
 
-                    <div class="input-group">
-                        <div class="input-box">
-                            <label for="firstname">Primeiro Nome</label>
-                            <input id="firstname" type="text" name="firstname" placeholder="Digite seu primeiro nome"
-                                required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="lastname">Sobrenome</label>
-                            <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome"
-                                required>
-                        </div>
-                        <div class="input-box">
-                            <label for="email">E-mail</label>
-                            <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="number">Celular</label>
-                            <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
-                        </div>
-
-                        <div class="input-box">
-                            <label for="senha">Senha</label>
-                            <input id="senha" type="senha" name="senha" placeholder="Digite sua senha" required>
-                        </div>
-
-
-                        <div class="input-box">
-                            <label for="confirmsenha">Confirme sua Senha</label>
-                            <input id="confirmsenha" type="senha" name="confirmsenha"
-                                placeholder="Digite sua senha novamente" required>
-                        </div>
-
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail"
+                            v-model="usuario.email" required>
                     </div>
 
-                    <div class="gender-inputs">
-                        <div class="gender-title">
-                            <h6>Gênero</h6>
-                        </div>
-
-                        <div class="gender-group">
-                            <div class="gender-input">
-                                <input id="female" type="radio" name="gender">
-                                <label for="female">Feminino</label>
-                            </div>
-
-                            <div class="gender-input">
-                                <input id="male" type="radio" name="gender">
-                                <label for="male">Masculino</label>
-                            </div>
-
-                            <div class="gender-input">
-                                <input id="others" type="radio" name="gender">
-                                <label for="others">Outros</label>
-                            </div>
-
-                            <div class="gender-input">
-                                <input id="none" type="radio" name="gender">
-                                <label for="none">Prefiro não dizer</label>
-                            </div>
-                        </div>
+                    <div class="input-box">
+                        <label for="number">Celular</label>
+                        <input id="number" type="tel" name="number" placeholder="(xx) xxxxx-xxxx"
+                            v-model="usuario.telefone" required>
                     </div>
 
-                    <div class="continue-button">
-                        <button @click="usuarioAdd()">Continuar </button>
+                    <div class="input-box">
+                        <label for="senha">Senha</label>
+                        <input id="senha" type="password" name="senha" placeholder="Digite sua senha"
+                            v-model="usuario.senha" required>
                     </div>
-                </form>
+                    <!-- <div class="input-box">
+                            <label for="confirmSenha">Confirme sua Senha</label>
+                            <input id="confirmSenha" type="password" name="confirmSenha"
+                                placeholder="Digite sua senha novamente" required onchange='confereSenha()'>
+                        </div> -->
+                </div>
+
+                <div class="continue-button">
+                    <button @click="usuarioAdd()">Continuar</button>
+                </div>
             </div>
         </div>
     </main>

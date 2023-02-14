@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const configure = {
-    local: import.meta.env.VITE_APIURL // Desenvolvimento
+    // local: import.meta.env.VITE_APIURL // Desenvolvimento
+    local: "http://localhost:5050/"
 };
 
 const http = axios.create({
